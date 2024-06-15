@@ -1,8 +1,31 @@
-<h1>{{ title }}</h1>
-<nav>
-  <a class="button" routerLink="/product-list" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Product List</a> |
-  <a class="button" routerLink="/product-add" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Add Product</a>
-  <a class="button" routerLink="/product-edit" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Edit Product</a>
-  <a class="button" routerLink="/product-delete" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Delete Product</a>
-</nav>
-<router-outlet></router-outlet>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="app.component.css"> <!-- Ajusta la ruta al CSS -->
+</head>
+<body>
+
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
+
+  <nav>
+    <a class="button" routerLink="/product-list" routerLinkActive="active">Product List</a>
+    <a class="button" routerLink="/product-add" routerLinkActive="active">Agregar Producto</a>
+    <a class="button" routerLink="/product-edit" routerLinkActive="active">Editar Producto</a>
+    <a class="button" routerLink="/product-delete" routerLinkActive="active">Eliminar Producto</a>
+  </nav>
+
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+
+  <footer>
+    <p>&copy; Grupo 1: Andrade, Almeida, Merino | Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>
